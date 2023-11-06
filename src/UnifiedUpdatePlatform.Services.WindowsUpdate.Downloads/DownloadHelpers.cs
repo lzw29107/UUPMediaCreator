@@ -543,7 +543,7 @@ namespace UnifiedUpdatePlatform.Services.WindowsUpdate.Downloads
                 {
                     return GetFilenameForCEUIFile(boundFile.Item1, payloadItems).Select(path =>
                     {
-                        try
+                        /*try
                         {
                             foreach (CompDB compDb in compDBs)
                             {
@@ -554,14 +554,14 @@ namespace UnifiedUpdatePlatform.Services.WindowsUpdate.Downloads
                                     {
                                         if (pkg.ID.Contains('-') && pkg.ID.Contains(".inf", StringComparison.InvariantCultureIgnoreCase))
                                         {
-                                            path = pkg.ID.Split("-")[1].Replace(".inf", ".cab").Replace(".INF", ".CAB");
+                                            path = pkg.ID.Split("-")[1].Replace(".inf", ".cab", StringComparison.InvariantCultureIgnoreCase);
                                         }
                                         break;
                                     }
                                 }
                             }
                         }
-                        catch { }
+                        catch { }*/
 
                         return new UUPFile(
                             boundFile.Item2,

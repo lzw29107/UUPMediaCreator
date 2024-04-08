@@ -461,7 +461,7 @@ namespace UnifiedUpdatePlatform.Services.WindowsUpdate
                                     "UpgradeEligible=1&" +
                                     "Version_RS5=2000000000&" +
                                     $"IsRetailOS={FlightRing == "Retail"}&" +
-                                    $"MediaVersion={ReportingVersion}" +
+                                    $"MediaVersion={ReportingVersion}&" +
                                     $"IsVbsEnabled={(IsVbsEnabled ? 1 : 0)}";
 
             if (ReportingSku is OSSkuId.EnterpriseS or OSSkuId.EnterpriseSN || ReportingSku.ToString().Contains("Server", StringComparison.InvariantCultureIgnoreCase))
